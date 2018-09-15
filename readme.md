@@ -13,3 +13,16 @@ Solução desenvolvida utilizando linguagem PHP e o framework Laravel 5.7 (https
 * Crie uma base de dados e atualize o arquivo *.env*
 * `php artisan serve` para iniciar a aplicação em  http://localhost:8000/
 
+### Já implementado ###
+
+* Estrutura da aplicação (rotas, views, controllers, etc)
+* Design inicial utilizando o framework Bootstrap (https://github.com/twbs/bootstrap)
+
+### Falta implementar ###
+
+* Camada de dados
+* Regras de negócio
+* Formulários de edição de dados
+* Painel de administração
+* Sistema de autenticação e autorização
+ 
