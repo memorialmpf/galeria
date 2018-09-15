@@ -16,7 +16,7 @@
       <div class="d-flex w-100 h-100 mx-auto flex-column">
         <header class="masthead">
           <div class="text-center mt-2">
-            <a href="index.html"><img src="img/bemvindo-big.png" width="360" alt=""></a>
+            <a href="{{route('home')}}"><img src="img/bemvindo-big.png" width="360" alt=""></a>
           </div>
         </header>
 
@@ -67,7 +67,7 @@
             </div>
             <!-- LINHA DIVISORIA E BOTAO TODOS -->
             <div class="row align-items-right mt-3">
-              <div class="col linha-horizontal text-right pb-2 mb-4"><a href="lista.html"><img src="img/btn-todos.png" alt="" class="mt-2"></a></div>
+              <div class="col linha-horizontal text-right pb-2 mb-4"><a href="{{route('home')}}"><img src="img/btn-todos.png" alt="" class="mt-2"></a></div>
             </div>
             <!-- CADEIA DE SUCESSORES -->
             <div class="row mt-1">

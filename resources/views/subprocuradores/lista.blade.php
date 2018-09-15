@@ -16,7 +16,7 @@
       <div class="d-flex w-100 h-100 mx-auto flex-column">
         <header class="masthead">
           <div class="text-center mt-2">
-            <a href="index.html"><img src="img/bemvindo-big.png" width="360" alt=""></a>
+            <a href="{{route('home')}}"><img src="img/bemvindo-big.png" width="360" alt=""></a>
           </div>
         </header>
 
@@ -32,57 +32,57 @@
           <div class="col-9" style="overflow-y:scroll; height: 900px;">
             <div class="row">
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Aristides Junqueira Alvarenga</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-x.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-x.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-z.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-z.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-w.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-w.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-k.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-k.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Aristides Junqueira Alvarenga</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-x.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-x.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-z.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-z.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-w.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-w.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-k.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-k.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Lorem Ipsom Dolorem</p>
                 </div>
                 <div class="col">
-                  <a href="detalhe.html"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
+                  <a href="{{route('detalhe')}}"><img class="img-fluid rounded-circle" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
                   <p class="small-nome">Aristides Junqueira Alvarenga</p>
                 </div>
                 <div class="col">

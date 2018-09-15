@@ -29,13 +29,13 @@
                  <div class="row w-100 mx-auto">
                    <div class="col-lg-4 pl-4">
                      <!-- <div class="rounded-circle btn ball align-middle" src="img/btn-galeria-1.jpg" style="width: 540px; height:540px;"></div> -->
-                     <a href="lista.html"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-1.jpg" width="540" height="540"></a>
+                     <a href="{{route('pgrs_lista')}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-1.jpg" width="540" height="540"></a>
                    </div><!-- /.col-lg-4 -->
                    <div class="col-lg-4">
-                     <a href="lista.html"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-2.jpg" width="540" height="540"></a>
+                     <a href="{{route('conselho_lista')}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-2.jpg" width="540" height="540"></a>
                    </div>
                    <div class="col-lg-4 pr-4">
-                     <a href="lista.html"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-3.jpg" width="540" height="540"></a>
+                     <a href="{{route('subprocuradores_lista')}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-3.jpg" width="540" height="540"></a>
                    </div>
                  </div>
 

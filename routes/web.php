@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+
+Route::get('/', 'FrontController@index')->name('home');
+Route::get('/detalhe', 'FrontController@detalhe')->name('detalhe');
+Route::get('/conselho', 'FrontController@conselho')->name('conselho_lista');
+Route::get('/pgrs', 'FrontController@pgrs')->name('pgrs_lista');
+Route::get('/subprocuradores', 'FrontController@subprocuradores')->name('subprocuradores_lista');
