@@ -1,12 +1,12 @@
 ## Galeria de Membros - Memorial ##
 
-Solução desenvolvida utilizando linguagem PHP e o framework Laravel 5.7 (https://github.com/laravel/laravel)
+Solução desenvolvida utilizando linguagem PHP e o framework Laravel 5.5 (https://github.com/laravel/laravel)
 
 **Galeria de Membros - Memorial** é uma das aplicações desenvolvidas para preservar a memória dos membros do Ministério Público Federal, estamos liberando o código fonte aqui no Github para que essa solução possa ser adaptada para outros ramos e instâncias do Ministério Público e instituições em geral.
 
 ### Instalação ###
 
-* `git clone https://github.com/memorialmpf/galeria.git galeria`
+* `git clone https://github.com/memorialmpf/galeria.git`
 * `cd galeria`
 * `composer install`
 * `php artisan key:generate`
