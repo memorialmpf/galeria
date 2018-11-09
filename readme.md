@@ -10,6 +10,8 @@ Solução desenvolvida utilizando linguagem PHP e o framework Laravel 5.5 (https
 * `cd galeria`
 * `composer install`
 * `php artisan key:generate`
+* `chmod -R o+w storage`
+* `cp .env.example .env`
 * Crie uma base de dados e atualize o arquivo *.env*
 * `php artisan serve` para iniciar a aplicação em  http://localhost:8000/
 
