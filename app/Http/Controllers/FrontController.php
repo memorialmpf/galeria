@@ -25,6 +25,15 @@ class FrontController extends Controller {
 
 		return view('detalhe', compact('membro', 'historicos'));
 	}
+
+	public function detalhes(Request $request, $matricula = null) {
+
+		$membro = Membro::where('pess_cd_mat', $matricula)->first();
+		$historicos = Historico::where('pess_cd_mat', $matricula)->get();
+
+		return compact('membro', 'historicos');
+	}
+
 	public function conselho(Request $request) {
 		return view('conselho.lista');
 	}
@@ -52,6 +61,17 @@ class FrontController extends Controller {
 		$prs = Membro::select('pess_nm', 'pess_cd_mat')->where('PESS_CEFT_CD', 'MPF10301')->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
 
 		return view('home.index_estado', compact('pchefes', 'pregs', 'prs'));
+	}
+
+	public function estado(Request $request, $uf = null) {
+
+		$pchefes = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 13)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
+
+		$pregs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 39)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
+
+		$prs = Membro::select('pess_nm', 'pess_cd_mat')->where('PESS_CEFT_CD', 'MPF10301')->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
+
+		return compact('pchefes', 'pregs', 'prs');
 	}
 
 }
