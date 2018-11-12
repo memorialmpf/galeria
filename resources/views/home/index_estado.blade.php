@@ -25,10 +25,12 @@
             <!-- MENU SANDUICHE -->
             <div class="col align-self-center mx-0 px-0">
             <div class="btn-group">
-              <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/ic-hamburguer.svg" alt="" width="32"></button>
+              <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/img/ic-hamburguer.svg" alt="" width="32"></button>
               <div class="dropdown-menu dropdown-menu-left">
-                <a href="index.html" class="ml-2 pl-2 mt-3 pt-3">Página inicial</a>
+                <a href="/" class="ml-2 pl-2 mt-3 pt-3">Página inicial</a>
                 <hr>
+
+                {{--
                 <a href="sobre.html" class="ml-2 pl-2">Sobre o Memorial MPF</a>
                 <hr>
                 <a href="linha-do-tempo.html" class="ml-2 pl-2">Linha do Tempo</a>
@@ -40,51 +42,52 @@
                 <a href="vitrine-virtual.html" class="ml-2 pl-2">Vitrine virtual</a>
                 <hr>
                 <a href="compartilhe-memorias.html" class="ml-2 pl-2">Compartilhe memórias</a><br><br>
+                --}}
               </div>
             </div>
             </div>
             <!-- LOGO MEMORIAL -->
             <div class="col align-self-center text-center mx-0 px-0">
-              <a class="navbar-brand" href="index.html"><img src="img/logo-Memorial.svg" height="45" class="logo-memorial mx-auto"></a>
+              <a class="navbar-brand" href="/"><img src="/img/logo-Memorial.svg" height="45" class="logo-memorial mx-auto"></a>
             </div>
             <!-- SELECT DE UNIDADE DO MPF -->
             <div class="col align-self-center justify-content-end text-right mx-0 px-0">
               <div class="btn-group">
 
               <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="img/ic-txt.svg"  id="uftxt" height="35" alt="">
-                  <img src="img/ic-ball.svg" id="ufball" height="35" alt="" class="ml-1">
+                  <img src="/img/ic-txt.svg"  id="uftxt" height="35" alt="">
+                  <img src="/img/ic-ball.svg" id="ufball" height="35" alt="" class="ml-1">
                </button>
 
                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="../index.html" class="ml-2 pl-2 pr-2 mr-2">Nacional</a><br>
-                  <a href="../AC/index.html" class="ml-2 pl-2">Acre</a><br>
-                  <a href="../AL/index.html" class="ml-2 pl-2">Alagoas </a><br>
-                  <a href="../AP/index.html" class="ml-2 pl-2">Amapá</a><br>
-                  <a href="../AM/index.html" class="ml-2 pl-2">Amazonas</a><br>
-                  <a href="../BA/index.html" class="ml-2 pl-2">Bahia</a><br>
-                  <a href="../CE/index.html" class="ml-2 pl-2">Ceará</a><br>
-                  <a href="../DF/index.html" class="ml-2 pl-2">Distrito Federal</a><br>
-                  <a href="../ES/index.html" class="ml-2 pl-2">Espírito Santo</a><br>
-                  <a href="../GO/index.html" class="ml-2 pl-2">Goiás</a><br>
-                  <a href="../MA/index.html" class="ml-2 pl-2">Maranhão  </a><br>
-                  <a href="../MT/index.html" class="ml-2 pl-2">Mato Grosso  </a><br>
-                  <a href="../MS/index.html" class="ml-2 pl-2">Mato Grosso do Sul</a> <br>
-                  <a href="../MG/index.html" class="ml-2 pl-2">Minas Gerais </a><br>
-                  <a href="../PA/index.html" class="ml-2 pl-2">Pará</a><br>
-                  <a href="../PB/index.html" class="ml-2 pl-2">Paraíba </a><br>
-                  <a href="../PR/index.html" class="ml-2 pl-2">Paraná </a><br>
-                  <a href="../PE/index.html" class="ml-2 pl-2">Pernambuco</a><br>
-                  <a href="../PI/index.html" class="ml-2 pl-2">Piauí </a><br>
-                  <a href="../RJ/index.html" class="ml-2 pl-2">Rio de Janeiro</a> <br>
-                  <a href="../RN/index.html" class="ml-2 pl-2">Rio Grande do Norte</a> <br>
-                  <a href="../RS/index.html" class="ml-2 pl-2">Rio Grande do Sul</a><br>
-                  <a href="../RO/index.html" class="ml-2 pl-2">Rondônia </a><br>
-                  <a href="../RR/index.html" class="ml-2 pl-2">Roraima </a><br>
-                  <a href="../SC/index.html" class="ml-2 pl-2">Santa Catarina</a> <br>
-                  <a href="../SP/index.html" class="ml-2 pl-2">São Paulo </a><br>
-                  <a href="../SE/index.html" class="ml-2 pl-2">Sergipe </a><br>
-                  <a href="../TO/index.html" class="ml-2 pl-2">Tocantins</a><br>
+                  <a href="/" class="ml-2 pl-2 pr-2 mr-2">Nacional</a><br>
+                  <a href="/estados/AC" class="ml-2 pl-2">Acre</a><br>
+                  <a href="/estados/AL" class="ml-2 pl-2">Alagoas </a><br>
+                  <a href="/estados/AP" class="ml-2 pl-2">Amapá</a><br>
+                  <a href="/estados/AM" class="ml-2 pl-2">Amazonas</a><br>
+                  <a href="/estados/BA" class="ml-2 pl-2">Bahia</a><br>
+                  <a href="/estados/CE" class="ml-2 pl-2">Ceará</a><br>
+                  <a href="/estados/DF" class="ml-2 pl-2">Distrito Federal</a><br>
+                  <a href="/estados/ES" class="ml-2 pl-2">Espírito Santo</a><br>
+                  <a href="/estados/GO" class="ml-2 pl-2">Goiás</a><br>
+                  <a href="/estados/MA" class="ml-2 pl-2">Maranhão  </a><br>
+                  <a href="/estados/MT" class="ml-2 pl-2">Mato Grosso  </a><br>
+                  <a href="/estados/MS" class="ml-2 pl-2">Mato Grosso do Sul</a> <br>
+                  <a href="/estados/MG" class="ml-2 pl-2">Minas Gerais </a><br>
+                  <a href="/estados/PA" class="ml-2 pl-2">Pará</a><br>
+                  <a href="/estados/PB" class="ml-2 pl-2">Paraíba </a><br>
+                  <a href="/estados/PR" class="ml-2 pl-2">Paraná </a><br>
+                  <a href="/estados/PE" class="ml-2 pl-2">Pernambuco</a><br>
+                  <a href="/estados/PI" class="ml-2 pl-2">Piauí </a><br>
+                  <a href="/estados/RJ" class="ml-2 pl-2">Rio de Janeiro</a> <br>
+                  <a href="/estados/RN" class="ml-2 pl-2">Rio Grande do Norte</a> <br>
+                  <a href="/estados/RS" class="ml-2 pl-2">Rio Grande do Sul</a><br>
+                  <a href="/estados/RO" class="ml-2 pl-2">Rondônia </a><br>
+                  <a href="/estados/RR" class="ml-2 pl-2">Roraima </a><br>
+                  <a href="/estados/SC" class="ml-2 pl-2">Santa Catarina</a> <br>
+                  <a href="/estados/SP" class="ml-2 pl-2">São Paulo </a><br>
+                  <a href="/estados/SE" class="ml-2 pl-2">Sergipe </a><br>
+                  <a href="/estados/TO" class="ml-2 pl-2">Tocantins</a><br>
                 </div>
             </div>
             </div>
@@ -101,7 +104,7 @@
       <div class="container mt-5 pt-5">
         <div class="row">
           <div class="col">
-              <a href="index.html"><img src="img/pagina-inicial.svg" height="10" class="mr-2" alt=""><span class="small-nome">Página inicial</span></a>
+              <a href="/"><img src="/img/pagina-inicial.svg" height="10" class="mr-2" alt=""><span class="small-nome">Página inicial</span></a>
           </div>
         </div>
         <div class="row">
@@ -114,7 +117,12 @@
       <nav>
         <div class="nav nav-tabs w-100 mx-4 text-center nav-justified" id="nav-tab" role="tablist">
           <a class="nav-item nav-link active" id="nav-1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-home" aria-selected="true">Procuradores-Chefe</a>
+
+@if(count($pregs) > 0 )
+
           <a class="nav-item nav-link" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-profile" aria-selected="false">Procuradores Regionais</a>
+
+          @endif
           <a class="nav-item nav-link" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-contact" aria-selected="false">Procuradores da República</a>
         </div>
       </nav>
@@ -129,6 +137,20 @@
       <!-- TAB 1 -->
     <div class="col tab-pane fade show active" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
       <div class="row text-center">
+
+
+
+         @foreach ($pchefes as $i =>$pchefe)
+
+  <div class="col">
+            <a href="/detalhe/{{$pchefe->pess_cd_mat}}"><img alt="" class="rounded-circle membro-ball membro-ativo" height="120" onerror='this.src="/img/sem_foto.jpg"' src="http://svlp-memorial01.pgr.mpf.mp.br/img/perfil/{{$pchefe->pess_cd_mat}}.jpg" width="120"/></a>
+            <p class="small-nome text-center membro-ball-nome"> {{$pchefe->pess_nm}}</p>
+          </div>
+
+                                @endforeach
+
+{{--
+
           <div class="col">
             <a href="galeria-membros-detalhe.html"><img class="rounded-circle membro-ball" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
             <p class="small-nome text-center membro-ball-nome">AristRID Junqueira Alvarenga</p>
@@ -177,12 +199,40 @@
             <a href="galeria-membros-detalhe.html"><img class="rounded-circle membro-ball" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
             <p class="small-nome text-center membro-ball-nome">Lorem Ipsom Dolorem</p>
           </div>
+
+ --}}
+
+
       </div>
 
     </div>
+
+
+@if(count($pregs) > 0 )
+
+
     <!-- TAB 2 -->
     <div class="col tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
       <div class="row text-center">
+
+
+
+   @foreach ($pregs as $i =>$preg)
+
+
+   <div class="col">
+            <a href="/detalhe/{{$preg->pess_cd_mat}}"><img alt="" class="rounded-circle membro-ball membro-ativo" height="120" onerror='this.src="/img/sem_foto.jpg"' src="http://svlp-memorial01.pgr.mpf.mp.br/img/perfil/{{$preg->pess_cd_mat}}.jpg" width="120"/></a>
+            <p class="small-nome text-center membro-ball-nome">{{$preg->pess_nm}}</p>
+          </div>
+
+
+
+                                @endforeach
+
+
+
+{{--
+
           <div class="col">
             <a href="galeria-membros-detalhe.html"><img class="rounded-circle membro-ball" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
             <p class="small-nome text-center membro-ball-nome">AristRID Junqueira Alvarenga</p>
@@ -274,11 +324,34 @@
             <p class="small-nome text-center membro-ball-nome">Lorem Ipsom Dolorem</p>
           </div>
           </div>
+
+ --}}
+ </div>
     </div>
+
+@endif
+
+
     <!-- TAB 3 -->
     <div class="col tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
       <div class="row text-center">
 
+
+   @foreach ($prs as $i =>$pr)
+
+
+   <div class="col">
+            <a href="/detalhe/{{$pr->pess_cd_mat}}"><img alt="" class="rounded-circle membro-ball membro-ativo" height="120" onerror='this.src="/img/sem_foto.jpg"' src="http://svlp-memorial01.pgr.mpf.mp.br/img/perfil/{{$pr->pess_cd_mat}}.jpg" width="120"/></a>
+            <p class="small-nome text-center membro-ball-nome">{{$pr->pess_nm}}</p>
+          </div>
+
+
+
+                                @endforeach
+
+
+
+{{--
           <div class="col">
             <a href="galeria-membros-detalhe.html"><img class="rounded-circle membro-ball" src="img/membro-x.jpg" width="120" height="120" alt=""></a>
             <p class="small-nome text-center membro-ball-nome">Lorem Ipsom Dolorem</p>
@@ -414,6 +487,10 @@
             <a href="galeria-membros-detalhe.html"><img class="rounded-circle membro-ball" src="img/membro-y.jpg" width="120" height="120" alt=""></a>
             <p class="small-nome text-center membro-ball-nome">AristRID Junqueira Alvarenga</p>
           </div>
+
+
+--}}
+
           </div>
     </div>
 
@@ -426,7 +503,7 @@
 
         <footer class="container text-center mt-0">
           <hr>
-          <a href="http://www.mpf.mp.br" target="_blank"><img src="img/logo-MPF.svg" height="85" alt=""></a>
+          <a href="http://www.mpf.mp.br" target="_blank"><img src="/img/logo-MPF.svg" height="85" alt=""></a>
         </footer>
 
     </main>
