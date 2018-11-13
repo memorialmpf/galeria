@@ -258,7 +258,7 @@
                     <div class="row">
                         <div class="col">
                             <span class="titulo-pagina">
-                                GALERIA DE MEMBROS
+                                GALERIA DE MEMBROS - NACIONAL
                             </span>
                         </div>
                     </div>

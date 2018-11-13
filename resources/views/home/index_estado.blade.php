@@ -109,7 +109,7 @@
         </div>
         <div class="row">
           <div class="col">
-              <span class="titulo-pagina">GALERIA DE MEMBROS</span>
+              <span class="titulo-pagina">GALERIA DE MEMBROS - {{strtoupper($estado)}}</span>
           </div>
         </div>
 

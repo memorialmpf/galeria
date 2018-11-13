@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Helper;
 use App\Historico;
 use App\Membro;
 use Illuminate\Http\Request;
@@ -59,8 +60,9 @@ class FrontController extends Controller {
 		$pregs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 39)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
 
 		$prs = Membro::select('pess_nm', 'pess_cd_mat')->where('PESS_CEFT_CD', 'MPF10301')->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
-
-		return view('home.index_estado', compact('pchefes', 'pregs', 'prs'));
+		$estado = Helper::pegaEstado($uf, 'N');
+		//dd($estado);
+		return view('home.index_estado', compact('pchefes', 'pregs', 'prs', 'estado'));
 	}
 
 	public function estado(Request $request, $uf = null) {
