@@ -288,7 +288,7 @@
                                 @foreach ($subs as $i =>$sub)
                                 <div class="col">
                                     <a href="/detalhe/{{$sub->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball membro-ativo" height="120" onerror='this.src="img/sem_foto.jpg"' src="http://svlp-memorial01.pgr.mpf.mp.br/img/perfil/{{$sub->pess_cd_mat}}.jpg" width="120"/>
+                                        <img alt="" class="rounded-circle membro-ball membro-ativo" height="120" onerror='this.src="img/sem_foto.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$sub->pess_cd_mat}}.jpg" width="120"/>
                                     </a>
                                     <p class="small-nome text-center membro-ball-nome">
                                         {{$sub->pess_nm}}
