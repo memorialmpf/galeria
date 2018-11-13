@@ -257,7 +257,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <span class="titulo-pagina">
+                            <span class="titulo-pagina text-uppercase">
                                 GALERIA DE MEMBROS - NACIONAL
                             </span>
                         </div>

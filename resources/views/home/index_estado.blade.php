@@ -109,7 +109,7 @@
         </div>
         <div class="row">
           <div class="col">
-              <span class="titulo-pagina">GALERIA DE MEMBROS - {{strtoupper($estado)}}</span>
+              <span class="titulo-pagina text-uppercase">GALERIA DE MEMBROS - {{$estado}}</span>
           </div>
         </div>
 
