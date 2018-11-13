@@ -241,9 +241,13 @@
             <p>{{$membro->pess_nm}}</p>
             <hr>
             <p class="membro-detalhe-titulo">Período</p>
+ <p class="membro-detalhe-texto">{{$membro->ceft_ds}} de  {{date('d/m/Y', strtotime($membro->pess_dt_iniexe))}} até  {{(!is_null($membro->pess_dt_desliga))?date('d/m/Y', strtotime($membro->pess_dt_desliga)):" atualmente"}} </p>
 
+ @if(count($historicos ) > 0)
+  <p class="membro-detalhe-titulo">Histórico de atuação   </p>
+@endif
    @foreach ($historicos as $i =>$historico)
-   <p class="membro-detalhe-texto"> {{$historico->fcco_ds}} de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}} até {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}  no(a) {{$historico->uorg_ds}} - {{$historico->uorg_ufed_sg}}
+   <p class="membro-detalhe-texto"> {{$historico->fcco_ds}} de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}} até {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}  no(a) {{$historico->uorg_ds}} - {{$historico->uorg_ufed_sg}} </p>
    @endforeach
 
 
