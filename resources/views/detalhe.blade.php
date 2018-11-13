@@ -226,7 +226,7 @@
     <div class="col mx-0 px-0">
       <div class="row w-100 mx-0 px-0">
           <div class="col-lg-4 text-sm-center">
-            <img class="rounded-circle membro-ball img-fluid text-center"  width="320"  onerror='this.src="/img/sem_foto.jpg"' src="http://svlp-memorial01.pgr.mpf.mp.br/img/perfil/{{$membro->pess_cd_mat}}.jpg" height="320" alt=""><br>
+            <img class="rounded-circle membro-ball img-fluid text-center"  width="320"  onerror='this.src="/img/sem_foto.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$membro->pess_cd_mat}}.jpg" height="320" alt=""><br>
 
 {{--
             <img src="/img/play-video.svg" height="50" alt="" class="mt-2"><br>
