@@ -246,8 +246,36 @@
  @if(count($historicos ) > 0)
   <p class="membro-detalhe-titulo">Histórico de atuação   </p>
 @endif
+
+
+@php
+$ultima_data = null;
+$ultimo_cargo = null;
+$ultimo_local = null;
+
+@endphp
    @foreach ($historicos as $i =>$historico)
+
+@if($historico->hret_dt_fim == $ultima_data and $ultimo_cargo == $historico->fcco_ds and $ultimo_local == $historico->uorg_ds)
+@continue
+@endif
    <p class="membro-detalhe-texto"> {{$historico->fcco_ds}} de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}} até {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}  no(a) {{$historico->uorg_ds}} - {{$historico->uorg_ufed_sg}} </p>
+
+
+
+@php
+$ultima_data = $historico->hret_dt_fim;
+$ultimo_cargo = $historico->fcco_ds;
+$ultimo_local = $historico->uorg_ds;
+
+@endphp
+
+
+
+
+
+
+
    @endforeach
 
 
