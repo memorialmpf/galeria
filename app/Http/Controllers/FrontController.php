@@ -11,10 +11,12 @@ class FrontController extends Controller {
 
 	public function index(Request $request) {
 
-		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->get();
+		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->orderBy('pess_nm')->get();
 		//$pgrs = Historico::where('HRET_LOFU_FCCO_CD', 1)->get();
 
 		$pgrs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('pess_nm')->distinct()->get();
+
+		$conselho = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('pess_nm')->distinct()->get();
 
 		return view('home.index_nacional', compact('subs', 'pgrs'));
 	}
