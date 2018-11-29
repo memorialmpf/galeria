@@ -243,40 +243,9 @@
             <p class="membro-detalhe-titulo">Período</p>
  <p class="membro-detalhe-texto">{{$membro->ceft_ds}} de  {{date('d/m/Y', strtotime($membro->pess_dt_iniexe))}} até  {{(!is_null($membro->pess_dt_desliga))?date('d/m/Y', strtotime($membro->pess_dt_desliga)):" atualmente"}} </p>
 
- @if(count($historicos ) > 0)
-  <p class="membro-detalhe-titulo">Histórico de atuação   </p>
-@endif
-
-
-@php
-$ultima_data = null;
-$ultimo_cargo = null;
-$ultimo_local = null;
-
-@endphp
-   @foreach ($historicos as $i =>$historico)
-
-@if($historico->hret_dt_fim == $ultima_data and $ultimo_cargo == $historico->fcco_ds and $ultimo_local == $historico->uorg_ds)
-@continue
-@endif
-   <p class="membro-detalhe-texto"> {{$historico->fcco_ds}} de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}} até {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}  no(a) {{$historico->uorg_ds}} - {{$historico->uorg_ufed_sg}} </p>
 
 
 
-@php
-$ultima_data = $historico->hret_dt_fim;
-$ultimo_cargo = $historico->fcco_ds;
-$ultimo_local = $historico->uorg_ds;
-
-@endphp
-
-
-
-
-
-
-
-   @endforeach
 
 
            {{--  <p class="membro-detalhe-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

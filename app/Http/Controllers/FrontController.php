@@ -24,7 +24,11 @@ class FrontController extends Controller {
 	public function detalhe(Request $request, $matricula = null) {
 
 		$membro = Membro::where('pess_cd_mat', $matricula)->first();
-		$historicos = Historico::where('pess_cd_mat', $matricula)->get();
+		$historicos = Historico::where('pess_cd_mat', $matricula)->first();
+
+		if ($membro->PESS_CEFT_CD == 'MPF10101') {
+			$membro = $historicos;
+		}
 
 		return view('detalhe', compact('membro', 'historicos'));
 	}
