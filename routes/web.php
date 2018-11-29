@@ -13,6 +13,7 @@
 
 Route::get('/', 'FrontController@index')->name('home');
 Route::get('/detalhe/{matricula}', 'FrontController@detalhe')->name('detalhe');
+Route::get('/detalhe_sub/{matricula}', 'FrontController@detalhe_sub')->name('detalhe_sub');
 Route::get('/detalhes/{matricula}', 'FrontController@detalhes')->name('detalhes');
 Route::get('/conselho', 'FrontController@conselho')->name('conselho_lista');
 Route::get('/pgrs', 'FrontController@pgrs')->name('pgrs_lista');

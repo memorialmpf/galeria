@@ -241,7 +241,7 @@
             <p>{{$membro->pess_nm}}</p>
             <hr>
             <p class="membro-detalhe-titulo">Período</p>
- <p class="membro-detalhe-texto">{{$membro->ceft_ds}} de  {{date('d/m/Y', strtotime($membro->pess_dt_iniexe))}} até  {{(!is_null($membro->pess_dt_desliga))?date('d/m/Y', strtotime($membro->pess_dt_desliga)):" atualmente"}} </p>
+ <p class="membro-detalhe-texto">{{$membro->ceft_ds}} de  {{date('d/m/Y', strtotime($membro->pess_dt_posse))}} até  {{(!is_null($membro->pess_dt_desliga))?date('d/m/Y', strtotime($membro->pess_dt_desliga)):" atualmente"}} </p>
 
 
 

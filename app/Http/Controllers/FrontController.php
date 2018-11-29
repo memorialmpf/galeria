@@ -33,6 +33,14 @@ class FrontController extends Controller {
 		return view('detalhe', compact('membro', 'historicos'));
 	}
 
+	public function detalhe_sub(Request $request, $matricula = null) {
+
+		$membro = Membro::where('pess_cd_mat', $matricula)->first();
+		$historicos = Membro::where('pess_cd_mat', $matricula)->first();
+
+		return view('detalhe', compact('membro', 'historicos'));
+	}
+
 	public function detalhes(Request $request, $matricula = null) {
 
 		$membro = Membro::where('pess_cd_mat', $matricula)->first();
