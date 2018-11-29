@@ -16,9 +16,9 @@ class FrontController extends Controller {
 
 		$pgrs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('pess_nm')->distinct()->get();
 
-		$conselho = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('pess_nm')->distinct()->get();
+		$cons = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('pess_nm')->distinct()->get();
 
-		return view('home.index_nacional', compact('subs', 'pgrs'));
+		return view('home.index_nacional', compact('subs', 'pgrs', 'cons'));
 	}
 
 	public function detalhe(Request $request, $matricula = null) {
