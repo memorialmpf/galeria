@@ -244,7 +244,7 @@
  <p class="membro-detalhe-texto">
 
 
-  {{$membro->ceft_ds}}
+  {{$membro->ceft_ds}} em exercício
 @if(is_null($membro->pess_dt_desliga))
 desde  {{date('d/m/Y', strtotime($membro->pess_dt_posse))}}
 @else
