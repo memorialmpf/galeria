@@ -11,8 +11,8 @@ class FrontController extends Controller {
 
 	public function index(Request $request) {
 
-		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->orderBy('PESS_DT_POSSE', 'desc')->get();
-		//$pgrs = Historico::where('HRET_LOFU_FCCO_CD', 1)->get();
+		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->orderBy('pess_nm')->distinct()->get();
+		//$subs = DB::table('MEMBROS')->where('PESS_CEFT_CD', 'MPF10101')->groupBy('pess_cd_mat')->having('pess_cd_mat', '>', 0)->get();
 
 		$pgrs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('pess_nm')->distinct()->get();
 

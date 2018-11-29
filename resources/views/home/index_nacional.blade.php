@@ -285,7 +285,16 @@
                         <!-- TAB 1 -->
                         <div aria-labelledby="nav-1-tab" class="col tab-pane fade show active" id="nav-1" role="tabpanel">
                             <div class="row text-center">
+
+@php
+$ultima_matricula = null;
+@endphp
                                 @foreach ($subs as $i =>$sub)
+
+@if($sub->pess_cd_mat == $ultima_matricula)
+@continue
+@endif
+
                                 <div class="col">
                                     <a href="/detalhe_sub/{{$sub->pess_cd_mat}}">
                                         <img alt="" class="rounded-circle membro-ball {{is_null($sub->pess_dt_desliga)? 'membro-ativo':''}}" height="120" onerror='this.src="img/sem_foto.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$sub->pess_cd_mat}}.jpg" width="120"/>
@@ -294,6 +303,14 @@
                                         {{$sub->pess_nm}}
                                     </p>
                                 </div>
+
+
+@php
+$ultima_matricula = $sub->pess_cd_mat;
+
+@endphp
+
+
                                 @endforeach
 
 
