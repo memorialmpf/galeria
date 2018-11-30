@@ -244,7 +244,10 @@
  <p class="membro-detalhe-texto">
 
 
-  {{$membro->ceft_ds}} em exercício
+
+
+{{$membro->ceft_ds}}
+  em exercício
 @if(is_null($membro->pess_dt_desliga))
 desde  {{date('d/m/Y', strtotime($membro->pess_dt_posse))}}
 @else
@@ -264,7 +267,7 @@ de {{date('d/m/Y', strtotime($membro->pess_dt_posse))}} até  {{date('d/m/Y', st
  <p class="membro-detalhe-texto">
 
 
-  {{$historico->ceft_ds}} em exercício
+  {{$historico->ceft_ds . $historico->fcco_ds }}  em exercício
 @if(is_null($historico->pess_dt_desliga))
 desde  {{date('d/m/Y', strtotime($historico->pess_dt_posse))}}
 @else

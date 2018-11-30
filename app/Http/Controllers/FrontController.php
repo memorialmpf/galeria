@@ -14,17 +14,18 @@ class FrontController extends Controller {
 		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->orderBy('pess_nm')->distinct()->get();
 		//$subs = DB::table('MEMBROS')->where('PESS_CEFT_CD', 'MPF10101')->groupBy('pess_cd_mat')->having('pess_cd_mat', '>', 0)->get();
 
-		$pgrs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('pess_nm')->distinct()->get();
+		$pgrs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 1)->orderBy('hret_dt_ini', 'desc')->get();
 
-		$cons = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('pess_nm')->distinct()->get();
+		$cons = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('hret_dt_ini', 'desc')->get();
 
 		return view('home.index_nacional', compact('subs', 'pgrs', 'cons'));
 	}
 
 	public function detalhe(Request $request, $matricula = null) {
 
-		$membro = Membro::where('pess_cd_mat', $matricula)->first();
-		$historicos = Historico::where('pess_cd_mat', $matricula)->first();
+		$membro = Historico::where('pess_cd_mat', $matricula)->first();
+
+		$historicos = Historico::where('pess_cd_mat', $matricula)->get();
 
 		return view('detalhe', compact('membro', 'historicos'));
 	}
