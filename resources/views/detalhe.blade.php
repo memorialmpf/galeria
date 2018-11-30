@@ -246,32 +246,17 @@
 
 
 
-{{$membro->ceft_ds}}
-  em exercício
-@if(is_null($membro->pess_dt_desliga))
-desde  {{date('d/m/Y', strtotime($membro->pess_dt_posse))}}
-@else
-de {{date('d/m/Y', strtotime($membro->pess_dt_posse))}} até  {{date('d/m/Y', strtotime($membro->pess_dt_desliga))}}
-@endif
-
- </p>
-
 @if(count($historicos ) > 0)
 
-  @foreach ($historicos as $i =>$historico)
-
-@if($i == 0)
-@continue
-@endif
+@foreach ($historicos as $i =>$historico)
 
  <p class="membro-detalhe-texto">
 
-
-  {{$historico->ceft_ds . $historico->fcco_ds }}  em exercício
-@if(is_null($historico->pess_dt_desliga))
-desde  {{date('d/m/Y', strtotime($historico->pess_dt_posse))}}
+  {{$historico->fcco_ds }}  em exercício
+@if(is_null($historico->hret_dt_fim))
+desde  {{date('d/m/Y', strtotime($historico->hret_dt_ini))}}
 @else
-de {{date('d/m/Y', strtotime($historico->pess_dt_posse))}} até  {{date('d/m/Y', strtotime($historico->pess_dt_desliga))}}
+de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}} até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
 @endif
 
  </p>
