@@ -257,7 +257,6 @@
 
 desde  {{date('d/m/Y', strtotime($historico->hret_dt_ini))}}
 
-
 @else
 
 @if (substr(date('d/m/', strtotime($historico->hret_dt_ini)), 0 , 5) == '01/01')

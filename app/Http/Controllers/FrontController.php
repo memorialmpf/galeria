@@ -36,9 +36,10 @@ class FrontController extends Controller {
 		$membro = Membro::where('pess_cd_mat', $matricula)->first();
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
-		$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds', 'pess_dt_posse as hret_dt_fim ', 'pess_dt_iniexe as hret_dt_ini')->where('pess_cd_mat', $matricula)->get()->toArray();
-		//dd($historicos);
+		$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds', 'pess_dt_posse as hret_dt_ini', 'pess_dt_desliga as hret_dt_fim')->where('pess_cd_mat', $matricula)->get()->toArray();
+
 		$historicos = Historico::hydrate($historicos);
+		//dd($historicos);
 		return view('detalhe', compact('membro', 'historicos'));
 	}
 
