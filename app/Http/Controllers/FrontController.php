@@ -27,7 +27,7 @@ class FrontController extends Controller {
 		$membro = Historico::where('pess_cd_mat', $matricula)->first();
 
 		$historicos = Historico::where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
-		dd($historicos);
+		//dd($historicos);
 		return view('detalhe', compact('membro', 'historicos'));
 	}
 
