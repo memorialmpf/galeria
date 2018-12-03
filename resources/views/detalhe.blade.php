@@ -259,18 +259,36 @@ desde  {{date('d/m/Y', strtotime($historico->hret_dt_ini))}}
 
 @else
 
+
+
+
+
 @if (substr(date('d/m/', strtotime($historico->hret_dt_ini)), 0 , 5) == '01/01')
 
-de {{date('Y', strtotime($historico->hret_dt_ini))}} até  {{date('Y', strtotime($historico->hret_dt_fim))}}
+de {{date('Y', strtotime($historico->hret_dt_ini))}}
 
 @else
 
-de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}} até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
+de {{date('d/m/Y', strtotime($historico->hret_dt_ini))}}
+@endif
 
 
 
+
+
+@if (substr(date('d/m/', strtotime($historico->hret_dt_fim)), 0 , 5) == '01/01')
+
+até  {{date('Y', strtotime($historico->hret_dt_fim))}}
+
+@else
+
+até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
 
 @endif
+
+
+
+
 
 @endif
 
