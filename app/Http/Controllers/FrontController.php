@@ -33,7 +33,7 @@ class FrontController extends Controller {
 
 	public function detalhe_sub(Request $request, $matricula = null) {
 
-		$membro = Membro::where('pess_cd_mat', $matricula)->first();
+		$membro = Membro::where('pess_cd_mat', $matricula)->with('biografia')->first();
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
 		$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds', 'pess_dt_posse as hret_dt_ini', 'pess_dt_desliga as hret_dt_fim')->where('pess_cd_mat', $matricula)->get()->toArray();
@@ -57,7 +57,7 @@ class FrontController extends Controller {
 
 	public function detalhe_conselho(Request $request, $matricula = null) {
 
-		$membro = Membro::where('pess_cd_mat', $matricula)->first();
+		$membro = Membro::where('pess_cd_mat', $matricula)->with('biografia')->first();
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
 		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('hret_dt_ini', 'desc')->get();
