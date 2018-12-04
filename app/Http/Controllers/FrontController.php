@@ -45,12 +45,13 @@ class FrontController extends Controller {
 
 	public function detalhe_pgr(Request $request, $matricula = null) {
 
-		$membro = Historico::where('pess_cd_mat', $matricula)->first();
+		$membro = Historico::with('biografia')->where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 1)->first();
 		//dd($membro);
 
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
-		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 1)->orderBy('hret_dt_ini', 'desc')->get();return view('detalhe', compact('membro', 'historicos'));
+		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 1)->orderBy('hret_dt_ini', 'desc')->get();
+		return view('detalhe', compact('membro', 'historicos'));
 
 	}
 
@@ -59,7 +60,8 @@ class FrontController extends Controller {
 		$membro = Membro::where('pess_cd_mat', $matricula)->first();
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
-		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('hret_dt_ini', 'desc')->get();return view('detalhe', compact('membro', 'historicos'));
+		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('hret_dt_ini', 'desc')->get();
+		return view('detalhe', compact('membro', 'historicos'));
 		//dd($historicos);
 		return view('detalhe', compact('membro', 'historicos'));
 	}

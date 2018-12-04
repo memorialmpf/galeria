@@ -296,18 +296,25 @@ até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
 
 @endforeach
 @endif
+
+
+
+
            {{--  <p class="membro-detalhe-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-
+--}}
+@if(!is_null($membro->biografia))
             <hr>
             <p class="membro-detalhe-titulo">biografia</p>
-            <p>Nasceu na cidade de São João Del-Rey no Estado de Minas Gerais em 2 de março de 1942, filho de Luiz de Melo Alvarenga e de D. Alice Junqueira Alvarenga.</p>
-            <p>Estudou em sua cidade natal e na vizinha, Mariana, bacharelando-se em Direito pela Universidade Federal de Minas Gerais em 1967.</p>
-            <p>Exerceu cargos administrativos e jurídicos em Belo Horizonte; a partir de 1968, após aprovado em concurso público, foi promotor de justiça nas Comarcas de Santa Cruz de Goiás, Porangatu, Palmeiras de Goiás e Goianésia, todas no estado de Goiás, até 7 de novembro de 1973, quando tomou posse no cargo de procurador da República, aprovado que fora no concurso público especifico; lecionou em Goiás, de 1971 a 1972; no curso de estágio da Faculdade de Direito das Faculdades</p> <p>Metropolitanas Unidas em São Paulo (1974), na Academia Nacional de Polícia em Brasília (1982) e no Centro de Ensino Unificado de Brasília-CEUB (1982-1985); vem participando de vários conselhos, grupos de trabalho e comissões examinadoras de concursos públicos e profere inúmeras palestras e conferências.</p>
-            <p>Publicou, em 3 de junho de 1977, o artigo "Crime de Sonegação Fiscal", na Folha da Tarde, em São Paulo e o livro "A competência criminal da justiça federal de primeira instância" Edição Saraiva, em 1978.</p>
-            <p>Foi agraciado com diversas condecorações.</p>
-            <p>Indicado para exercer o cargo de procurador-geral da República, em 20 de junho de 1989, já na vigência da Constituição Federal de 1988, que estabeleceu novo procedimento para a nomeação, no § 12 do seu art. 128, teve seu nome aprovado pelo Senado Federal, tomando posse em 28 de junho de 1989, para exercer um mandato de dois anos; ao seu término foi reconduzido, submetendo-se novamente, ao que se convencionou chamar de "sabatina", ao crivo do Senado Federal, para um mandato de mais dois anos (28/06/1991 a 28/06/95).</p>
---}}
+
+<p>
+
+  {{$membro->biografia->biografia}}
+</p>
+
+
+
+@endif
+
           </div>
 
 
