@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Helper;
 use App\Historico;
 use App\Membro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Response;
 
 class FrontController extends Controller {
 
-	public function index(Request $request) {
+	public function index(Request $request, $webservice = 'N') {
 
 		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->orderBy('pess_nm')->distinct()->get();
 		//$subs = DB::table('MEMBROS')->where('PESS_CEFT_CD', 'MPF10101')->groupBy('pess_cd_mat')->having('pess_cd_mat', '>', 0)->get();
@@ -19,7 +19,14 @@ class FrontController extends Controller {
 
 		$cons = Historico::select('pess_nm', 'pess_cd_mat', 'hret_dt_ini', 'hret_dt_fim')->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('hret_dt_fim', 'desc')->get();
 
-		return view('home.index_nacional', compact('subs', 'pgrs', 'cons'));
+		if ($webservice == 'N') {
+
+			return view('home.index_nacional', compact('subs', 'pgrs', 'cons'));
+
+		} else {
+			return Response::json(array('subs' => $subs, 'pgrs' => $pgrs, 'cons' => $cons), 200, [], JSON_UNESCAPED_UNICODE);
+		}
+
 	}
 
 	public function detalhe(Request $request, $matricula = null) {
@@ -31,7 +38,7 @@ class FrontController extends Controller {
 		return view('detalhe', compact('membro', 'historicos'));
 	}
 
-	public function detalhe_sub(Request $request, $matricula = null) {
+	public function detalhe_sub(Request $request, $matricula = null, $webservice = 'N') {
 
 		$membro = Membro::where('pess_cd_mat', $matricula)->with('biografia')->first();
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
@@ -40,10 +47,18 @@ class FrontController extends Controller {
 
 		$historicos = Historico::hydrate($historicos);
 		//dd($historicos);
-		return view('detalhe', compact('membro', 'historicos'));
+
+		if ($webservice == 'N') {
+
+			return view('detalhe', compact('membro', 'historicos'));
+
+		} else {
+			return Response::json(array('membro' => $membro, 'historicos' => $historicos), 200, [], JSON_UNESCAPED_UNICODE);
+		}
+
 	}
 
-	public function detalhe_pgr(Request $request, $matricula = null) {
+	public function detalhe_pgr(Request $request, $matricula = null, $webservice = 'N') {
 
 		$membro = Historico::with('biografia')->where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 1)->first();
 		//dd($membro);
@@ -51,19 +66,31 @@ class FrontController extends Controller {
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
 		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 1)->orderBy('hret_dt_ini', 'desc')->get();
-		return view('detalhe', compact('membro', 'historicos'));
+		if ($webservice == 'N') {
+			return view('detalhe', compact('membro', 'historicos'));
+		} else {
+			return Response::json(array('membro' => $membro, 'historicos' => $historicos), 200, [], JSON_UNESCAPED_UNICODE);
+		}
 
 	}
 
-	public function detalhe_conselho(Request $request, $matricula = null) {
+	public function detalhe_conselho(Request $request, $matricula = null, $webservice = 'N') {
 
 		$membro = Membro::where('pess_cd_mat', $matricula)->with('biografia')->first();
 		//$historicos = Membro::where('pess_cd_mat', $matricula)->get();
 		//$historicos = DB::table('MEMBROS')->select('pess_cd_mat', 'ceft_ds as fcco_ds')->where('pess_cd_mat', $matricula)->orderBy('hret_dt_ini', 'desc')->get();
 		$historicos = Historico::where('pess_cd_mat', $matricula)->where('HRET_LOFU_FCCO_CD', 9999)->orderBy('hret_dt_ini', 'desc')->get();
-		return view('detalhe', compact('membro', 'historicos'));
+
+		if ($webservice == 'N') {
+
+			return view('detalhe', compact('membro', 'historicos'));
+
+		} else {
+			return Response::json(array('membro' => $membro, 'historicos' => $historicos), 200, [], JSON_UNESCAPED_UNICODE);
+		}
+
 		//dd($historicos);
-		return view('detalhe', compact('membro', 'historicos'));
+		//	return view('detalhe', compact('membro', 'historicos'));
 	}
 
 	public function detalhes(Request $request, $matricula = null) {
@@ -91,19 +118,19 @@ class FrontController extends Controller {
 		return $subs;
 
 	}
+/*
+public function estados(Request $request, $uf = null) {
+//	dd($uf);
+$pchefes = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 13)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
 
-	public function estados(Request $request, $uf = null) {
-		//	dd($uf);
-		$pchefes = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 13)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
+$pregs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 39)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
 
-		$pregs = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 39)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
-
-		$prs = Membro::select('pess_nm', 'pess_cd_mat')->where('PESS_CEFT_CD', 'MPF10301')->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
-		$estado = Helper::pegaEstado($uf, 'N');
-		//dd($estado);
-		return view('home.index_estado', compact('pchefes', 'pregs', 'prs', 'estado'));
-	}
-
+$prs = Membro::select('pess_nm', 'pess_cd_mat')->where('PESS_CEFT_CD', 'MPF10301')->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();
+$estado = Helper::pegaEstado($uf, 'N');
+//dd($estado);
+return view('home.index_estado', compact('pchefes', 'pregs', 'prs', 'estado'));
+}
+ */
 	public function estado(Request $request, $uf = null) {
 
 		$pchefes = Historico::select('pess_nm', 'pess_cd_mat')->where('HRET_LOFU_FCCO_CD', 13)->where('UORG_UFED_SG', strtoupper($uf))->orderBy('pess_nm')->distinct()->get();

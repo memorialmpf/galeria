@@ -10,13 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-
 Route::get('/', 'FrontController@index')->name('home');
-Route::get('/detalhe/{matricula}', 'FrontController@detalhe')->name('detalhe');
-Route::get('/detalhe_sub/{matricula}', 'FrontController@detalhe_sub')->name('detalhe_sub');
-Route::get('/detalhe_pgr/{matricula}', 'FrontController@detalhe_pgr')->name('detalhe_pgr');
-Route::get('/detalhe_conselho/{matricula}', 'FrontController@detalhe_conselho')->name('detalhe_conselho');
+Route::get('/inicial/{webservice?}}', 'FrontController@index')->name('home_webservice');
+Route::get('/detalhe_sub/{matricula}/{webservice?}', 'FrontController@detalhe_sub')->name('detalhe_sub');
+Route::get('/detalhe_pgr/{matricula}/{webservice?}', 'FrontController@detalhe_pgr')->name('detalhe_pgr');
+Route::get('/detalhe_conselho/{matricula}/{webservice?}', 'FrontController@detalhe_conselho')->name('detalhe_conselho');
 
+Route::get('/detalhe/{matricula}', 'FrontController@detalhe')->name('detalhe');
 Route::get('/detalhes/{matricula}', 'FrontController@detalhes')->name('detalhes');
 Route::get('/conselho', 'FrontController@conselho')->name('conselho_lista');
 Route::get('/pgrs', 'FrontController@pgrs')->name('pgrs_lista');
