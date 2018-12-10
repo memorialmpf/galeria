@@ -297,7 +297,7 @@ $ultima_matricula = null;
 
                                 <div class="col">
                                     <a href="/detalhe_sub/{{$sub->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball {{is_null($sub->pess_dt_desliga)? 'membro-ativo':''}}" height="120" onerror='this.src="img/sem_foto.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$sub->pess_cd_mat}}.jpg" width="120"/>
+                                        <img alt="" class="rounded-circle membro-ball {{is_null($sub->pess_dt_desliga)? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$sub->pess_cd_mat}}.jpg" width="120"/>
                                     </a>
                                     <p class="small-nome text-center membro-ball-nome">
                                         {{$sub->pess_nm}}
@@ -326,7 +326,7 @@ $ultima_matricula = $sub->pess_cd_mat;
 
                                 <div class="col">
                                     <a href="/detalhe_pgr/{{$pgr->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball {{($pgr->hret_dt_fim == '2019-09-18 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="img/sem_foto.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$pgr->pess_cd_mat}}.jpg" width="120"/>
+                                        <img alt="" class="rounded-circle membro-ball {{($pgr->hret_dt_fim == '2019-09-18 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$pgr->pess_cd_mat}}.jpg" width="120"/>
                                     </a>
                                     <p class="small-nome text-center membro-ball-nome">
                                         {{$pgr->pess_nm}}
@@ -351,7 +351,7 @@ $ultima_matricula = null;
 
                                 <div class="col">
                                     <a href="/detalhe_conselho/{{$con->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball {{($con->hret_dt_fim == '2019-01-01 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="img/sem_foto.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$con->pess_cd_mat}}.jpg" width="120"/>
+                                        <img alt="" class="rounded-circle membro-ball {{($con->hret_dt_fim == '2019-01-01 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$con->pess_cd_mat}}.jpg" width="120"/>
                                     </a>
                                     <p class="small-nome text-center membro-ball-nome">
                                         {{$con->pess_nm}}<br> {{date('Y', strtotime($con->hret_dt_ini)) . " - " . date('Y', strtotime($con->hret_dt_fim)) }}
