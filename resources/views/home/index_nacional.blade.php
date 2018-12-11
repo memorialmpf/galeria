@@ -110,13 +110,13 @@ $ultima_data = null;
             <!-- SEPARADOR -->
               <div class="row d-flex mx-auto align-items-start w-100">
                   <div class="col text-right">
-                    <img src="img/separador-ano.jpg" width="700" alt="">
+                    <img src="img/separador-ano.jpg" width="400" alt="">
                   </div>
                   <div class="col-2">
                     <h3>{{date('Y', strtotime($con->hret_dt_ini)) . " / " . date('Y', strtotime($con->hret_dt_fim)) }}</h3><br><br>
                   </div>
                   <div class="col text-left">
-                    <img src="img/separador-ano.jpg" width="700" alt="">
+                    <img src="img/separador-ano.jpg" width="400" alt="">
                   </div>
               </div>
               <!-- FIM SEPARADOR -->

@@ -24,3 +24,5 @@ Route::get('/pgrs', 'FrontController@pgrs')->name('pgrs_lista');
 Route::get('/subprocuradores', 'FrontController@subprocuradores')->name('subprocuradores_lista');
 Route::get('/estado/{uf}', 'FrontController@estado')->name('estado_lista');
 Route::get('/estados/{uf}', 'FrontController@estados')->name('estados_lista');
+
+Route::get('/convivencia', 'FrontController@convivencia')->name('convivencia');

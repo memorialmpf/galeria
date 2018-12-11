@@ -48,6 +48,11 @@ class FrontController extends Controller {
 		return view('detalhe', compact('membro', 'historicos'));
 	}
 
+	public function convivencia(Request $request) {
+
+		return view('convivencia.telao');
+	}
+
 	public function detalhe_sub(Request $request, $matricula = null, $webservice = 'N') {
 
 		$membro = Membro::where('pess_cd_mat', $matricula)->with('biografia')->first();
