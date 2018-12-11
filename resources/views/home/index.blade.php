@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/cover.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" rel="stylesheet">
     <title>Galeria Membros 1</title>
   </head>
     <body class="text-center">
@@ -27,15 +27,17 @@
           </p> -->
 
                  <div class="row w-100 mx-auto">
-                   <div class="col-lg-4 pl-4">
-                     <!-- <div class="rounded-circle btn ball align-middle" src="img/btn-galeria-1.jpg" style="width: 540px; height:540px;"></div> -->
-                     <a href="{{route('pgrs_lista')}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-1.jpg" width="540" height="540"></a>
-                   </div><!-- /.col-lg-4 -->
-                   <div class="col-lg-4">
-                     <a href="{{route('conselho_lista')}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-2.jpg" width="540" height="540"></a>
+
+                   <div class="col text-center">
+                     <a href="{{route('home', ['aba' => 1])}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-pgrs.jpg" width="540" height="540"></a>
                    </div>
+
                    <div class="col-lg-4 pr-4">
-                     <a href="{{route('subprocuradores_lista')}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-3.jpg" width="540" height="540"></a>
+                     <a href="{{route('home', ['aba' => 2])}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-conselho.jpg" width="540" height="540"></a>
+                   </div>
+
+                   <div class="col-lg-4 pl-4">
+                     <a href="{{route('home', ['aba' => 3])}}"><img class="img-fluid rounded-circle btn ball" src="img/btn-galeria-subs.jpg" width="540" height="540"></a>
                    </div>
                  </div>
 

@@ -11,6 +11,10 @@ use Response;
 class FrontController extends Controller {
 
 	public function index(Request $request, $webservice = 'N') {
+		$aba = $request->input('aba');
+		if ($aba > 3 || is_null($aba) || !isset($aba)) {
+			$aba = 1;
+		}
 
 		$subs = Membro::where('PESS_CEFT_CD', 'MPF10101')->orderBy('pess_nm')->distinct()->get();
 		//$subs = DB::table('MEMBROS')->where('PESS_CEFT_CD', 'MPF10101')->groupBy('pess_cd_mat')->having('pess_cd_mat', '>', 0)->get();
@@ -21,12 +25,18 @@ class FrontController extends Controller {
 
 		if ($webservice == 'N') {
 
-			return view('home.index_nacional', compact('subs', 'pgrs', 'cons'));
+			return view('home.index_nacional', compact('subs', 'pgrs', 'cons', 'aba'));
 
 		} else {
 			return Response::json(array('subs' => $subs, 'pgrs' => $pgrs, 'cons' => $cons), 200, [], JSON_UNESCAPED_UNICODE);
 		}
 
+	}
+
+	public function intro(Request $request) {
+
+		//dd($historicos);
+		return view('home.index');
 	}
 
 	public function detalhe(Request $request, $matricula = null) {

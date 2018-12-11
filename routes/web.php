@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/', 'FrontController@index')->name('home');
+Route::get('/', 'FrontController@intro')->name('intro');
+Route::get('/principal', 'FrontController@index')->name('home');
 Route::get('/inicial/{webservice?}', 'FrontController@index')->name('home_webservice');
 Route::get('/detalhe_sub/{matricula}/{webservice?}', 'FrontController@detalhe_sub')->name('detalhe_sub');
 Route::get('/detalhe_pgr/{matricula}/{webservice?}', 'FrontController@detalhe_pgr')->name('detalhe_pgr');

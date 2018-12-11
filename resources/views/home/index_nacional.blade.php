@@ -1,290 +1,167 @@
-<!DOCTYPE doctype html>
+<!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-                <meta content="" name="description">
-                    <meta content="" name="author">
-                        <link href="img/favicon.png" rel="icon">
-                            <title>
-                                Memorial MPF
-                            </title>
-                            <!-- Bootstrap core CSS -->
-                            <link href="css/bootstrap.css" rel="stylesheet">
-                                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" rel="stylesheet">
-                                    <!-- Custom styles for this template -->
-                                    <link href="css/carousel.css" rel="stylesheet">
-                                    </link>
-                                </link>
-                            </link>
-                        </link>
-                    </meta>
-                </meta>
-            </meta>
-        </meta>
-    </head>
-    <body>
-        <!-- CABEÇALHO NAVEGAÇAO -->
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white mx-auto no-gutters mx-0 px-0" style="box-shadow: 0px 9px 13px -4px rgba(0,0,0,0.20);">
-                <div class="container">
-                    <div class="row w-100 mx-0 px-0">
-                        <!-- MENU SANDUICHE -->
-                        <div class="col align-self-center mx-0 px-0">
-                            <div class="btn-group">
-                                <button aria-expanded="false" aria-haspopup="true" class="btn btn-light dropdown-toggle" data-toggle="dropdown" type="button">
-                                    <img alt="" src="/img/ic-hamburguer.svg" width="32"/>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-left">
-                                    <a class="ml-2 pl-2 mt-3 pt-3" href="/">
-                                        Página inicial
-                                    </a>
-                                    <hr>
-                                    {{--
-                                        <a class="ml-2 pl-2" href="sobre.html">
-                                            Sobre o Memorial MPF
-                                        </a>
-                                        <hr>
-                                            <a class="ml-2 pl-2" href="linha-do-tempo.html">
-                                                Linha do Tempo
-                                            </a>
-                                            <hr>
-                                                <a class="ml-2 pl-2" href="galeria-membros-lista.html">
-                                                    Galeria de Membros
-                                                </a>
-                                                <hr>
-                                                    <a class="ml-2 pl-2" href="agenda.html">
-                                                        Agenda
-                                                    </a>
-                                                    <hr>
-                                                        <a class="ml-2 pl-2" href="vitrine-virtual.html">
-                                                            Vitrine virtual
-                                                        </a>
-                                                        <hr>
-                                                            <a class="ml-2 pl-2" href="compartilhe-memorias.html">
-                                                                Compartilhe memórias
-                                                            </a>
-                                                            <br>
-                                                                <br>
-                                                                </br>
-                                                            </br>
-                                                        </hr>
-                                                    </hr>
-                                                </hr>
-                                            </hr>
-                                        </hr>
-                                    </hr>
-                                    --}}
-                                </div>
-                            </div>
-                        </div>
-                        <!-- LOGO MEMORIAL -->
-                        <div class="col align-self-center text-center mx-0 px-0">
-                            <a class="navbar-brand" href="/">
-                                <img class="mx-auto logo-memorial" height="45" src="img/logo-Memorial.svg"/>
-                            </a>
-                        </div>
-                        <!-- SELECT DE UNIDADE DO MPF -->
-                        <div class="col align-self-center justify-content-end text-right mx-0 px-0">
-                            <div class="btn-group">
-                                <button aria-expanded="false" aria-haspopup="true" class="btn btn-light dropdown-toggle" data-toggle="dropdown" type="button">
-                                    <img alt="" height="35" id="uftxt" src="img/ic-txt.svg">
-                                        <img alt="" class="ml-1" height="35" id="ufball" src="img/ic-ball.svg">
-                                        </img>
-                                    </img>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="ml-2 pl-2 pr-2 mr-2" href="/">
-                                        Nacional
-                                    </a>
-                                    <br>
-                                        <a class="ml-2 pl-2" href="/estados/AC">
-                                            Acre
-                                        </a>
-                                        <br>
-                                            <a class="ml-2 pl-2" href="/estados/AL">
-                                                Alagoas
-                                            </a>
-                                            <br>
-                                                <a class="ml-2 pl-2" href="/estados/AP">
-                                                    Amapá
-                                                </a>
-                                                <br>
-                                                    <a class="ml-2 pl-2" href="/estados/AM">
-                                                        Amazonas
-                                                    </a>
-                                                    <br>
-                                                        <a class="ml-2 pl-2" href="/estados/BA">
-                                                            Bahia
-                                                        </a>
-                                                        <br>
-                                                            <a class="ml-2 pl-2" href="/estados/CE">
-                                                                Ceará
-                                                            </a>
-                                                            <br>
-                                                                <a class="ml-2 pl-2" href="/estados/DF">
-                                                                    Distrito Federal
-                                                                </a>
-                                                                <br>
-                                                                    <a class="ml-2 pl-2" href="/estados/ES">
-                                                                        Espírito Santo
-                                                                    </a>
-                                                                    <br>
-                                                                        <a class="ml-2 pl-2" href="/estados/GO">
-                                                                            Goiás
-                                                                        </a>
-                                                                        <br>
-                                                                            <a class="ml-2 pl-2" href="/estados/MA">
-                                                                                Maranhão
-                                                                            </a>
-                                                                            <br>
-                                                                                <a class="ml-2 pl-2" href="/estados/MT">
-                                                                                    Mato Grosso
-                                                                                </a>
-                                                                                <br>
-                                                                                    <a class="ml-2 pl-2" href="/estados/MS">
-                                                                                        Mato Grosso do Sul
-                                                                                    </a>
-                                                                                    <br>
-                                                                                        <a class="ml-2 pl-2" href="/estados/MG">
-                                                                                            Minas Gerais
-                                                                                        </a>
-                                                                                        <br>
-                                                                                            <a class="ml-2 pl-2" href="/estados/PA">
-                                                                                                Pará
-                                                                                            </a>
-                                                                                            <br>
-                                                                                                <a class="ml-2 pl-2" href="/estados/PB">
-                                                                                                    Paraíba
-                                                                                                </a>
-                                                                                                <br>
-                                                                                                    <a class="ml-2 pl-2" href="/estados/PR">
-                                                                                                        Paraná
-                                                                                                    </a>
-                                                                                                    <br>
-                                                                                                        <a class="ml-2 pl-2" href="/estados/PE">
-                                                                                                            Pernambuco
-                                                                                                        </a>
-                                                                                                        <br>
-                                                                                                            <a class="ml-2 pl-2" href="/estados/PI">
-                                                                                                                Piauí
-                                                                                                            </a>
-                                                                                                            <br>
-                                                                                                                <a class="ml-2 pl-2" href="/estados/RJ">
-                                                                                                                    Rio de Janeiro
-                                                                                                                </a>
-                                                                                                                <br>
-                                                                                                                    <a class="ml-2 pl-2" href="/estados/RN">
-                                                                                                                        Rio Grande do Norte
-                                                                                                                    </a>
-                                                                                                                    <br>
-                                                                                                                        <a class="ml-2 pl-2" href="/estados/RS">
-                                                                                                                            Rio Grande do Sul
-                                                                                                                        </a>
-                                                                                                                        <br>
-                                                                                                                            <a class="ml-2 pl-2" href="/estados/RO">
-                                                                                                                                Rondônia
-                                                                                                                            </a>
-                                                                                                                            <br>
-                                                                                                                                <a class="ml-2 pl-2" href="/estados/RR">
-                                                                                                                                    Roraima
-                                                                                                                                </a>
-                                                                                                                                <br>
-                                                                                                                                    <a class="ml-2 pl-2" href="/estados/SC">
-                                                                                                                                        Santa Catarina
-                                                                                                                                    </a>
-                                                                                                                                    <br>
-                                                                                                                                        <a class="ml-2 pl-2" href="/estados/SP">
-                                                                                                                                            São Paulo
-                                                                                                                                        </a>
-                                                                                                                                        <br>
-                                                                                                                                            <a class="ml-2 pl-2" href="/estados/SE">
-                                                                                                                                                Sergipe
-                                                                                                                                            </a>
-                                                                                                                                            <br>
-                                                                                                                                                <a class="ml-2 pl-2" href="/estados/TO">
-                                                                                                                                                    Tocantins
-                                                                                                                                                </a>
-                                                                                                                                                <br>
-                                                                                                                                                </br>
-                                                                                                                                            </br>
-                                                                                                                                        </br>
-                                                                                                                                    </br>
-                                                                                                                                </br>
-                                                                                                                            </br>
-                                                                                                                        </br>
-                                                                                                                    </br>
-                                                                                                                </br>
-                                                                                                            </br>
-                                                                                                        </br>
-                                                                                                    </br>
-                                                                                                </br>
-                                                                                            </br>
-                                                                                        </br>
-                                                                                    </br>
-                                                                                </br>
-                                                                            </br>
-                                                                        </br>
-                                                                    </br>
-                                                                </br>
-                                                            </br>
-                                                        </br>
-                                                    </br>
-                                                </br>
-                                            </br>
-                                        </br>
-                                    </br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main role="main">
-            <div class="container-fluid" style="background-color: white; ">
-                <div class="container mt-5 pt-5">
-                    <div class="row">
-                        <div class="col">
-                            <a href="/">
-                                <img alt="" class="mr-2" height="10" src="img/pagina-inicial.svg">
-                                    <span class="small-nome">
-                                        Página inicial
-                                    </span>
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <span class="titulo-pagina text-uppercase">
-                                GALERIA DE MEMBROS - NACIONAL
-                            </span>
-                        </div>
-                    </div>
-                    <!-- NAVEGACAO EM TABS  -->
-                    <nav>
-                        <div class="nav nav-tabs w-100 text-center mx-4 nav-justified" id="nav-tab" role="tablist">
-                            <a aria-controls="nav-home" aria-selected="true" class="nav-item nav-link active" data-toggle="tab" href="#nav-1" id="nav-1-tab" role="tab">
-                                Subprocuradores-Gerais da República
-                            </a>
-                            <a aria-controls="nav-profile" aria-selected="false" class="nav-item nav-link" data-toggle="tab" href="#nav-2" id="nav-2-tab" role="tab">
-                                Procuradores-Gerais da República
-                            </a>
-                            <a aria-controls="nav-contact" aria-selected="false" class="nav-item nav-link" data-toggle="tab" href="#nav-3" id="nav-3-tab" role="tab">
-                                Conselho Superior do MPF
-                            </a>
-                        </div>
-                    </nav>
-                </div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/cover.css">
+
+    <title>Galeria Membros {{$aba}}</title>
+  </head>
+    <body class="text-center" style="overflow-x: hidden;">
+
+      <div class="d-flex w-99 h-100 mx-auto flex-column">
+        <header class="masthead">
+          <div class="row">
+            <div class="col">
+              <div class="text-center mt-2">
+                <a href="{{route('intro')}}"><img src="img/tit-galeriamembro-big.png" width="360" alt=""></a>
+              </div>
             </div>
-            <!-- INICIO LISTA BOLINHA MEMBROS -->
-            <div class="container-fluid" style="background-color: #363636; ">
-                <div class="container mt-2 pt-2">
-                    <div class="tab-content" id="nav-tabContent">
-                        <!-- TAB 1 -->
-                        <div aria-labelledby="nav-1-tab" class="col tab-pane fade show active" id="nav-1" role="tabpanel">
-                            <div class="row text-center">
+          </div>
+
+          <div class="row mt-2 pt-2 mx-auto text-center">
+            <div class="col">
+              <div class="col nav nav-tabs nav-justified text-center" id="nav-tab" role="tablist" style="background: transparent;">
+                <a class="nav-item nav-link {{($aba == 1)?"active show":""}}" id="nav-1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-home" aria-selected="true" style="border-color: #666; text-shadow: none;"><img src="/img/bullet-horizontal.png" alt=""> Procuradores-Gerais da República</a>
+                <a class="nav-item nav-link {{($aba == 2)?"active show":""}}" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-profile" aria-selected="false" style="border-color: #666; text-shadow: none;"><img src="img/bullet-horizontal.png" alt=""> Conselho Superior do MPF</a>
+                <a class="nav-item nav-link {{($aba == 3)?"active show":""}}" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-contact" aria-selected="false" style="border-color: #666; text-shadow: none;"><img src="img/bullet-horizontal.png" alt=""> Subprocuradores-Gerais da República</a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- LINHA COM AS COLUNAS -->
+        <div class="row w-100 mx-auto align-items-start px-0">
+
+            <div class="col-12">
+                <div class="tab-content" id="nav-tabContent">
+
+                <div class="tab-pane fade {{($aba == 1)?"active show":""}}" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
+                  <div class="container-fluid">
+                  <div class="row text-center mx-auto mr-0 justify-content-between">
+
+
+
+
+ @foreach ($pgrs as $i =>$pgr)
+
+
+
+
+
+
+
+                                <div class="col">
+                                    <a href="/detalhe_pgr/{{$pgr->pess_cd_mat}}">
+                                        <img alt="" class="rounded-circle membro-ball {{($pgr->hret_dt_fim == '2019-09-18 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$pgr->pess_cd_mat}}.jpg" width="120"/>
+                                    </a>
+                                    <p class="small-nome text-center membro-ball-nome">
+                                        {{$pgr->pess_nm}}
+                                    </p>
+                                </div>
+                                @endforeach
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+  <!-- ABA 2 -->
+
+          <div class="col-12 tab-pane fade {{($aba == 2)?"active show":""}}" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
+            <div class="row text-center ">
+
+
+
+
+
+      @php
+$ultima_matricula = null;
+$ultima_data = null;
+@endphp
+                                @foreach ($cons as $i =>$con)
+
+@if($con->pess_cd_mat == $ultima_matricula)
+@continue
+@endif
+
+
+
+@if($con->hret_dt_fim != $ultima_data)
+
+
+            <!-- SEPARADOR -->
+              <div class="row d-flex mx-auto align-items-start w-100">
+                  <div class="col text-right">
+                    <img src="img/separador-ano.jpg" width="700" alt="">
+                  </div>
+                  <div class="col-2">
+                    <h3>{{date('Y', strtotime($con->hret_dt_ini)) . " / " . date('Y', strtotime($con->hret_dt_fim)) }}</h3><br><br>
+                  </div>
+                  <div class="col text-left">
+                    <img src="img/separador-ano.jpg" width="700" alt="">
+                  </div>
+              </div>
+              <!-- FIM SEPARADOR -->
+
+
+@endif
+
+
+
+
+
+
+            <div class="col">
+              <a href="/detalhe_conselho/{{$con->pess_cd_mat}}"><img class="rounded-circle  {{($con->hret_dt_fim == '2019-01-01 00:00:00')? 'membro-ativo':''}}" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"'  src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$con->pess_cd_mat}}.jpg" width="120" height="120" alt=""></a>
+              <p class="small-nome">{{$con->pess_nm}}</p>
+            </div>
+
+
+
+@php
+$ultima_matricula = $con->pess_cd_mat;
+$ultima_data = $con->hret_dt_fim ;
+@endphp
+
+
+                                @endforeach
+
+
+
+
+
+
+
+          </div>
+          </div>
+
+
+
+
+
+            <!-- ABA 3 -->
+
+            <div class="col-12 tab-pane fade {{($aba == 3)?"active show":""}}" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
+              <div class="row text-center">
+
 
 @php
 $ultima_matricula = null;
@@ -295,14 +172,16 @@ $ultima_matricula = null;
 @continue
 @endif
 
-                                <div class="col">
-                                    <a href="/detalhe_sub/{{$sub->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball {{is_null($sub->pess_dt_desliga)? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$sub->pess_cd_mat}}.jpg" width="120"/>
-                                    </a>
-                                    <p class="small-nome text-center membro-ball-nome">
-                                        {{$sub->pess_nm}}
-                                    </p>
-                                </div>
+
+
+
+
+          <div class="col">
+                  <a href="/detalhe_sub/{{$sub->pess_cd_mat}}"><img class="rounded-circle {{is_null($sub->pess_dt_desliga)? 'membro-ativo':''}}" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$sub->pess_cd_mat}}.jpg" width="120" height="120" alt=""></a>
+                  <p class="small-nome">{{$sub->pess_nm}}</p>
+                </div>
+
+
 
 
 @php
@@ -316,88 +195,51 @@ $ultima_matricula = $sub->pess_cd_mat;
 
 
 
-                            </div>
-                        </div>
-                        <!-- TAB 2 -->
-                        <div aria-labelledby="nav-2-tab" class="col tab-pane fade" id="nav-2" role="tabpanel">
-                            <div class="row text-center">
-                                @foreach ($pgrs as $i =>$pgr)
 
 
-                                <div class="col">
-                                    <a href="/detalhe_pgr/{{$pgr->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball {{($pgr->hret_dt_fim == '2019-09-18 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$pgr->pess_cd_mat}}.jpg" width="120"/>
-                                    </a>
-                                    <p class="small-nome text-center membro-ball-nome">
-                                        {{$pgr->pess_nm}}
-                                    </p>
-                                </div>
-                                @endforeach
-
-                            </div>
-                        </div>
-                        <!-- TAB 3 -->
-                        <div aria-labelledby="nav-3-tab" class="col tab-pane fade" id="nav-3" role="tabpanel">
-                            <div class="row text-center">
-
-                             @php
-$ultima_matricula = null;
-@endphp
-                                @foreach ($cons as $i =>$con)
-
-@if($con->pess_cd_mat == $ultima_matricula)
-@continue
-@endif
-
-                                <div class="col">
-                                    <a href="/detalhe_conselho/{{$con->pess_cd_mat}}">
-                                        <img alt="" class="rounded-circle membro-ball {{($con->hret_dt_fim == '2019-01-01 00:00:00')? 'membro-ativo':''}}" height="120" onerror='this.src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/00.jpg"' src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$con->pess_cd_mat}}.jpg" width="120"/>
-                                    </a>
-                                    <p class="small-nome text-center membro-ball-nome">
-                                        {{$con->pess_nm}}<br> {{date('Y', strtotime($con->hret_dt_ini)) . " - " . date('Y', strtotime($con->hret_dt_fim)) }}
-                                    </p>
-                                </div>
 
 
-@php
-$ultima_matricula = $con->pess_cd_mat;
-
-@endphp
 
 
-                                @endforeach
 
 
-                              </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!-- FIM BOLINHAS MEMBROS -->
-            <footer class="container text-center mt-0">
-                <hr>
-                    <a href="http://www.mpf.mp.br" target="_blank">
-                        <img alt="" height="85" src="img/logo-MPF.svg"/>
-                    </a>
-                </hr>
-            </footer>
-        </main>
-        <!-- FOOTER -->
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-        </script>
-        <script src="js/jquery.min.js">
-        </script>
-        <script src="js/vendor/popper.min.js">
-        </script>
-        <script src="js/bootstrap.js">
-        </script>
-        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-        <script src="js/holder.min.js">
-        </script>
-        <script src="js/interno.js">
-        </script>
-    </body>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+      </div>
+
+        <!-- FOOTER LOGO MEMORIAL-->
+         <footer class="mastfoot mt-auto align-middle align-items-middle fixed-bottom" style="background-color: #a61c1f !important; height: 60px;">
+          <div class="inner">
+            <img src="img/logo-memorial-mpf.png" class="align-middle mt-2" alt="">
+          </div>
+        </footer>
+
+      <!-- <footer class="footer">
+      <div class="container">
+        <img src="img/logo-memorial-mpf.png" class="align-middle mt-2" alt="">
+      </div>
+      </footer> -->
+
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
