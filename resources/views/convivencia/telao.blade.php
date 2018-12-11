@@ -27,177 +27,98 @@
         </div>
       </header>
 
-      <main role="main" class="inner cover">
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner text-center mb-4 pb-4">
+@php
+$ordem = 1;
 
-            <div class="carousel-item active mb-4 pb-4">
+@endphp
 
-              <!-- GRID 1 -->
 
-              <div class="card-deck mx-4 px-4 mb-4 pb-4">
+@foreach ($servidores as $i =>$servidor)
+
+
+@if($i == 0)
+<main role="main" class="inner cover">
+ <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner text-center mb-4 pb-4">
+@endif
+
+
+
+@if($ordem == 1 or $ordem == 7 or $ordem == 13)
+
+@if($ordem > 1)
+  </div>
+
+ </div>
+
+@endif
+<div class="carousel-item {{($i == 0)?'active':''}} mb-4 pb-4">
+   <div class="card-deck mx-4 px-4 mb-4 pb-4">
+@endif
+
+
+
+@if( $ordem == 4 or $ordem == 10 or $ordem == 13 or $ordem == 16)
+
+
+</div>
+
+ <div class="card-deck mx-4 px-4 mb-4">
+
+@endif
+
+
+
+
+
+
+
 
 
               <div class="card">
                 <div class="card-body">
-                  <h1 class="card-title nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                  <h4 class="card-text unidade-servidor">Unidade macro 1</h4>
+                  <h1 class="card-title nome-servidor">{{$servidor->ds_nome}}</h1>
+                  <h4 class="card-text unidade-servidor">{{$servidor->sg_unidade_principal}}</h4>
                 </div>
               </div>
-              <div class="card">
-
-                <div class="card-body">
-                  <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                  <h4 class="unidade-servidor">Unidade macro 1</h4>
-                </div>
-              </div>
-              <div class="card">
-
-                <div class="card-body">
-                  <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                  <h4 class="unidade-servidor">Unidade macro 1</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-deck mx-4 px-4">
 
 
 
-            <div class="card">
-              <div class="card-body">
-                <h1 class="card-title nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                <h4 class="card-text unidade-servidor">Unidade macro 1</h4>
-              </div>
-            </div>
 
-            <div class="card">
-              <div class="card-body">
-                <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                <h4 class="unidade-servidor">Unidade macro 1</h4>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                <h4 class="unidade-servidor">Unidade macro 1</h4>
-              </div>
-            </div>
+@if($ordem == 18)
+  </div>
+   </div>
+@endif
 
 
 
-          </div>
-          </div>
-
-          <!-- GRID 2 -->
-
-          <div class="carousel-item mb-4 pb-4">
-            <div class="card-deck mx-4 px-4 mb-4 pb-4">
-
-            <div class="card">
-              <div class="card-body">
-                <h1 class="card-title nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                <h4 class="card-text unidade-servidor">Unidade macro 1</h4>
-              </div>
-            </div>
 
 
-            <div class="card">
-              <div class="card-body">
-                <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                <h4 class="unidade-servidor">Unidade macro 1</h4>
-              </div>
-            </div>
-            <div class="card">
 
-              <div class="card-body">
-                <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-                <h4 class="unidade-servidor">Unidade macro 1</h4>
-              </div>
-            </div>
-          </div>
 
-          <div class="card-deck mx-4 px-4">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="card-title nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-              <h4 class="card-text unidade-servidor">Unidade macro 1</h4>
-            </div>
-          </div>
-          <div class="card">
 
-            <div class="card-body">
-              <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-              <h4 class="unidade-servidor">Unidade macro 1</h4>
-            </div>
-          </div>
-          <div class="card">
+{{-- $ordem . $servidor->ds_nome --}}
 
-            <div class="card-body">
-              <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-              <h4 class="unidade-servidor">Unidade macro 1</h4>
-            </div>
-          </div>
-        </div>
-        </div>
 
-        <!-- GRID 2 X 2 -->
 
-        <div class="carousel-item mb-4 pb-4">
-          <div class="card-deck mx-4 px-4 mb-4 pb-4">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="card-title nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-              <h4 class="card-text unidade-servidor">Unidade macro 1</h4>
-            </div>
-          </div>
-          <div class="card">
+@php
+$ordem++;
+if($ordem > 18){
+$ordem = 1;
+}
 
-            <div class="card-body">
-              <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-              <h4 class="unidade-servidor">Unidade macro 1</h4>
-            </div>
-          </div>
-          <div class="card">
+@endphp
 
-            <div class="card-body">
-              <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-              <h4 class="unidade-servidor">Unidade macro 1</h4>
-            </div>
-          </div>
-        </div>
+@endforeach
 
-        <div class="card-deck mx-4 px-4">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-            <h4 class="card-text unidade-servidor">Unidade macro 1</h4>
-          </div>
-        </div>
-        <div class="card">
 
-          <div class="card-body">
-            <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-            <h4 class="unidade-servidor">Unidade macro 1</h4>
-          </div>
-        </div>
-        <div class="card">
-
-          <div class="card-body">
-            <h1 class="nome-servidor">Nome do Servidor 1 Nome do Servidor 1Nome do Servidor 1</h1>
-            <h4 class="unidade-servidor">Unidade macro 1</h4>
-          </div>
-        </div>
-      </div>
-
-      </div>
-
-          </div>
-
+    </div>
 
       </main>
+
+
+
 
 
       <footer class="mastfoot mt-auto align-middle align-items-middle" style="background-color: #a61c1f !important; height: 60px;">

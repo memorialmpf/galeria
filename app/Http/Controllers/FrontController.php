@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Historico;
 use App\Membro;
+use App\Servidor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Response;
@@ -50,7 +51,9 @@ class FrontController extends Controller {
 
 	public function convivencia(Request $request) {
 
-		return view('convivencia.telao');
+		$servidores = Servidor::select('ds_nome', 'sg_unidade_principal')->get();
+
+		return view('convivencia.telao', compact('servidores'));
 	}
 
 	public function detalhe_sub(Request $request, $matricula = null, $webservice = 'N') {
