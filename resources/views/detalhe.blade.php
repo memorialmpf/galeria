@@ -76,7 +76,7 @@
 
  <p class="membro-detalhe-texto">
 
-  {{$historico->fcco_ds }}  em exercício
+  {{$historico->fcco_ds }}   {{($historico->fcco_ds == 'SUBPROCURADOR-GERAL DA REPUBLICA')?'em exercício':''}}
 @if(is_null($historico->hret_dt_fim))
 
 desde  {{date('d/m/Y', strtotime($historico->hret_dt_ini))}}
