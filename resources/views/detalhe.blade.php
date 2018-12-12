@@ -136,8 +136,7 @@ até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
 
 
 @endif
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
                   <!-- <p>Nasceu na cidade de São João Del-Rey no Estado de Minas Gerais em 2 de março de 1942, filho de Luiz de Melo Alvarenga e de D. Alice Junqueira Alvarenga.
@@ -227,6 +226,7 @@ até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
                 <div class="linha-vertical"><a href="lista-conselho.html"><img src="/img/tarja-3off.png" alt="" class="btn"></a></div>
               </div>-->
         </div>
+
 
         <!-- FOOTER LOGO MEMORIAL-->
         <footer class="mastfoot mt-auto align-middle align-items-middle fixed-bottom" style="background-color: #a61c1f !important; height: 60px;">
