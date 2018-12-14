@@ -256,10 +256,10 @@ até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
      <script>
 $('#exampleModalCenter').on('shown.bs.modal', function () {
-  $('#video1')[0].play();
+  $('#myVideo')[0].play();
 })
 $('#exampleModalCenter').on('hidden.bs.modal', function () {
-  $('#video1')[0].pause();
+  $('#myVideo')[0].pause();
 })
 </script>
 
