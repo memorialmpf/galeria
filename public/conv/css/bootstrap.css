@@ -56,13 +56,13 @@ html {
 
 }
 .nome-servidor {
-  color: #8a1b1b !important;
+  color: #fff !important;
   font-size: 26px;
   font-weight: bold;
   text-shadow: none !important;
 }
 .unidade-servidor {
-  color: #666 !important;
+  color: #fe6464 !important;
   font-size: 18px;
   font-weight: lighter;
   text-shadow: none !important;
@@ -4395,12 +4395,10 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: border-box;
   border-right: 1px solid #9b1c1f;
   /*border-radius: 0rem;*/
-
-
 }
 
 .card > hr {

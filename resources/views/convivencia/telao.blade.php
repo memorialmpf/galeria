@@ -17,14 +17,19 @@
     <link href="/conv/css/cover.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center" background="/img/novo_bg.jpg">
 
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <!-- <h3>Servidores que fazem nossa história</h3> -->
-          <img src="conv/img/Titulo-Servidores.png" width="400px" alt="" class="mt-2 pt-2">
+         {{--  <img src="conv/img/Titulo-Servidores.png" width="400px" alt="" class="mt-2 pt-2"> --}}
+
+<img src="/img/novo_topo.png" alt="" class="mt-0 pt-0 img-fluid">
         </div>
+
+
+
       </header>
 
 
@@ -121,9 +126,9 @@ $ordem = 1;
 
 
 
-      <footer class="mastfoot mt-auto align-middle align-items-middle" style="background-color: #a61c1f !important; height: 60px;">
+      <footer class="mastfoot mt-auto align-middle align-items-middle"  height: 60px;">
         <div class="inner">
-          <img src="conv/img/logo-memorial-mpf.png" class="align-middle mt-2" alt="">
+         {{--  <img src="conv/img/logo-memorial-mpf.png" class="align-middle mt-2" alt="">--}}
         </div>
       </footer>
 
