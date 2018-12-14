@@ -242,7 +242,7 @@ até  {{date('d/m/Y', strtotime($historico->hret_dt_fim))}}
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body" style="background-color: #111 !important">
-                <video autoplay muted loop id="myVideo" poster="/img/10_18_Premio_MPF_Cidadao_Vinheta-SITE_2.jpg" style="width: 1024px; height: auto; background-size: cover;">
+                <video  id="myVideo" poster="/img/10_18_Premio_MPF_Cidadao_Vinheta-SITE_2.jpg" style="width: 1024px; height: auto; background-size: cover;">
                   <source src="http://midia.pgr.mpf.mp.br/memorial/galeria-membros/pgr/{{$membro->pess_cd_mat}}.mp4"" type="video/mp4">
                 </video>
               </div>
